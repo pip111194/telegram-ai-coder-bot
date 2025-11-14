@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Coder Bot Dashboard</title>
+    <title>AI Coder Bot - Powered by Google Gemini</title>
     <style>
         * {
             margin: 0;
@@ -38,6 +38,15 @@
         .header p {
             font-size: 1.2em;
             opacity: 0.9;
+        }
+
+        .gemini-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-top: 10px;
+            font-weight: bold;
         }
 
         .stats-grid {
@@ -107,6 +116,15 @@
             color: #667eea;
         }
 
+        .command-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid #10b981;
+        }
+
         .bot-link {
             display: inline-block;
             background: #667eea;
@@ -133,6 +151,12 @@
             border-radius: 20px;
             font-weight: bold;
             margin-left: 10px;
+            animation: pulse-status 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-status {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
         @keyframes pulse {
@@ -143,6 +167,22 @@
         .loading {
             animation: pulse 1.5s ease-in-out infinite;
         }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -150,6 +190,7 @@
         <div class="header">
             <h1>🤖 AI Coder Bot</h1>
             <p>Your AI-Powered Coding Assistant</p>
+            <div class="gemini-badge">⚡ Powered by Google Gemini AI</div>
             <span class="status">● ONLINE</span>
         </div>
 
@@ -179,13 +220,36 @@
         <div class="info-section">
             <h2>✨ Features</h2>
             <ul class="feature-list">
-                <li><strong>💻 Code Generation:</strong> Generate code in any programming language</li>
-                <li><strong>🐛 Debug Assistant:</strong> Find and fix bugs in your code</li>
-                <li><strong>📖 Code Explanation:</strong> Understand complex programming concepts</li>
+                <li><strong>💻 Code Generation:</strong> Generate code in Python, JavaScript, Java, C++, Go, Rust and more</li>
+                <li><strong>🐛 Debug Assistant:</strong> Find and fix bugs with AI-powered analysis</li>
+                <li><strong>📖 Code Explanation:</strong> Understand complex programming concepts easily</li>
                 <li><strong>🔧 Code Optimization:</strong> Improve code performance and quality</li>
-                <li><strong>📝 Documentation:</strong> Generate documentation for your code</li>
-                <li><strong>🌐 Multi-Language:</strong> Support for Python, JavaScript, Java, C++, and more</li>
+                <li><strong>📝 Documentation:</strong> Generate comprehensive code documentation</li>
+                <li><strong>⚡ Fast Responses:</strong> Powered by Google Gemini for lightning-fast AI</li>
+                <li><strong>🌐 Multi-Language:</strong> Support for 50+ programming languages</li>
             </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>📱 Bot Commands</h2>
+            <div class="command-box">
+                <strong>/start</strong> - Start the bot and see welcome message
+            </div>
+            <div class="command-box">
+                <strong>/code</strong> Write a Python function to reverse a string
+            </div>
+            <div class="command-box">
+                <strong>/debug</strong> [your buggy code here]
+            </div>
+            <div class="command-box">
+                <strong>/explain</strong> What is recursion?
+            </div>
+            <div class="command-box">
+                <strong>/help</strong> - Show all available commands
+            </div>
+            <div class="command-box">
+                <strong>/stats</strong> - View bot statistics
+            </div>
         </div>
 
         <div class="info-section" style="text-align: center;">
@@ -196,6 +260,13 @@
             <a href="https://t.me/YOUR_BOT_USERNAME" class="bot-link" target="_blank">
                 Open Bot on Telegram
             </a>
+            
+            <div class="tech-stack">
+                <div class="tech-badge">Node.js</div>
+                <div class="tech-badge">Express</div>
+                <div class="tech-badge">Google Gemini AI</div>
+                <div class="tech-badge">Telegram Bot API</div>
+            </div>
         </div>
     </div>
 
