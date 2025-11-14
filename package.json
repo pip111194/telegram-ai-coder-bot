@@ -1,21 +1,20 @@
 {
   "name": "telegram-ai-coder-bot",
   "version": "1.0.0",
-  "description": "AI-powered Telegram bot for code generation and assistance",
+  "description": "AI-powered Telegram bot for code generation and assistance using Google Gemini",
   "main": "src/bot.js",
   "scripts": {
     "start": "node src/bot.js",
     "dev": "nodemon src/bot.js"
   },
-  "keywords": ["telegram", "bot", "ai", "coder"],
+  "keywords": ["telegram", "bot", "ai", "coder", "gemini"],
   "author": "Bhindi",
   "license": "MIT",
   "dependencies": {
     "node-telegram-bot-api": "^0.64.0",
     "express": "^4.18.2",
     "dotenv": "^16.3.1",
-    "axios": "^1.6.0",
-    "openai": "^4.20.0"
+    "axios": "^1.6.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
